@@ -1,6 +1,6 @@
 body {
     font-family: "Tahoma", sans-serif;
-    background: #e6f2ff;
+    background: linear-gradient(to bottom, #b3d9ff, #e6f2ff);
     margin: 0;
 }
 
@@ -8,19 +8,37 @@ header, footer {
     background: #1e88e5;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
-    background: #ffffffcc;
-    padding: 20px;
-    border-radius: 10px;
 }
 
-section {
-    margin-bottom: 20px;
+.stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 10px #0002;
+}
+
+.glass {
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px #0003;
 }
 
 form {
@@ -29,19 +47,13 @@ form {
     gap: 10px;
 }
 
-label {
-    font-weight: bold;
-}
-
-input, select, button {
-    padding: 8px;
-}
-
 button {
     grid-column: 1 / 3;
     background: #1e88e5;
     color: white;
+    padding: 10px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -53,14 +65,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
     text-align: center;
-}
-
-.summary-section p {
-    font-size: 1.1em;
 }
