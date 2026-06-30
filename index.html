@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>حسابات شخصية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl">
+    <header>
+        <h1>نظام الحسابات الشخصية</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>إضافة حركة مالية</h2>
+            <form id="transaction-form">
+                <label>النوع:</label>
+                <select id="type">
+                    <option value="income">دخل</option>
+                    <option value="expense">مصروف</option>
+                </select>
+
+                <label>الفئة:</label>
+                <input type="text" id="category" placeholder="مثال: راتب، إيجار، وقود">
+
+                <label>المبلغ:</label>
+                <input type="number" id="amount" step="0.01">
+
+                <label>التاريخ:</label>
+                <input type="date" id="date">
+
+                <button type="submit">إضافة</button>
+            </form>
+        </section>
+
+        <section class="summary-section">
+            <h2>ملخص</h2>
+            <p>إجمالي الدخل: <span id="total-income">0</span> ريال</p>
+            <p>إجمالي المصاريف: <span id="total-expense">0</span> ريال</p>
+            <p>الرصيد الصافي: <span id="balance">0</span> ريال</p>
+        </section>
+
+        <section class="table-section">
+            <h2>الحركات المالية</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>النوع</th>
+                        <th>الفئة</th>
+                        <th>المبلغ</th>
+                        <th>التاريخ</th>
+                        <th>حذف</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-table"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>إدارة الحسابات الشخصية</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
